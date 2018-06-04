@@ -1,0 +1,25 @@
+<div mat-dialog-content>
+        <p>Select Project
+        <mat-form-field>
+                <mat-select style="border-bottom:1px solid;" [(ngModel)]="data.name">
+                  <mat-option  style="background-color:white;" *ngFor="let name of projects" value="{{name.data.name}}"> {{name.data.name}} </mat-option>
+                </mat-select> 
+        </mat-form-field></p>
+        <p>Enter the task:
+        <mat-form-field>
+          <input matInput style="border-bottom:1px solid;"name="someName" [(ngModel)]="data.task" >
+        </mat-form-field></p>
+        <p>date:
+        <mat-form-field>
+            <input matInput style="border-bottom:1px solid;"type="date" name="anotherName" [(ngModel)]="data.date" >
+        </mat-form-field></p>
+        <p>hours:
+        <mat-form-field>
+            <input matInput style="border-bottom:1px solid;" name="number" [(ngModel)]="data.hours" >
+        </mat-form-field></p>
+        
+</div>
+<div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">No Thanks</button>
+        <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

@@ -1,0 +1,36 @@
+.login-container{
+    padding: 30px;
+    max-width: 350px;
+    width:100% !important;
+    background-color: #f7f7f7;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+    overflow: hidden;
+    font-family: Arial;
+    }
+    .login-container h1{
+        text-align: center;
+        font-size: 1.8em;
+        font-family:Arial;
+    }
+    .login-container input[type=submit]{
+        width:100%;
+        display: block;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .login-container a{
+        text-decoration: none;
+        color: #666;
+        font-weight: 400;
+        text-align: center;
+        display: inline-block;
+        opacity: 0.6;
+        transition: opacity ease 0.5s;
+    }
+    .login-submit:hover{
+        border: 0px;
+        text-shadow: 0 1px rgba(0,0,0,0.3);
+        background-color: #357ae3;
+    }

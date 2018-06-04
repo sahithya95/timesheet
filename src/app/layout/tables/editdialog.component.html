@@ -1,0 +1,26 @@
+<div mat-dialog-content>
+    
+        <p>Enter the name:
+        <mat-form-field>
+          <input matInput type="text" name="otherName" [(ngModel)]="data.name" style="background-color: white;border-bottom:1px solid; " readonly>
+        </mat-form-field></p>
+
+        <p>Enter the task:
+        <mat-form-field>
+          <input matInput type="text"name="someName" [(ngModel)]="data.task"style="background-color: white;border-bottom:1px solid;" >
+        </mat-form-field></p>
+
+        <p>Date:
+        <mat-form-field>
+            <input matInput type="date" name="anotherName" [(ngModel)]="data.date" style="background-color: white;border-bottom:1px solid;">
+        </mat-form-field></p>
+        <p>Hours:
+            <mat-form-field>
+                <input matInput type="number" name="otherName" [(ngModel)]="data.hours" style="background-color: white;border-bottom:1px solid;">
+            </mat-form-field></p>
+        
+</div>
+<div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">No Thanks</button>
+        <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

@@ -1,0 +1,41 @@
+<div [@routerTransition]>
+    <div class="row">
+        <div class="col col-lg-12">
+            <div class="card mb-6">
+                <div class="card-header">timesheet
+                    <button (click)="newTableDialog()" style="float:right">add</button>
+
+                </div>
+                
+                <div class="card-body table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>project Name</th>
+                                <th>task</th>
+                                <th>date</th>
+                                <th>hours</th>
+                                <th>action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <tr *ngFor="let employee of employees; let i= index;">
+                                
+                                <td>{{employee.data.name}}</td>
+                                <td>{{employee.data.task}}</td>
+                                <td>{{employee.data.date}}</td>
+                                <td>{{employee.data.hours}}</td>
+                                <td><div>
+                                    <button (click)="edittableDialog($event,employee.data,employee.id,i)">Edit</button>
+                                    <button (click)="deletetable($event,employee)">Delete</button>
+                                  </div></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

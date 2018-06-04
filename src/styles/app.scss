@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/bootstrap";
+@import "spinner";
+@import "utils";
+@import "rtl";
+@import "responsive";
+
+.cdk-overlay-container{
+    position: fixed;
+    right: 100px;
+    top: 100px;
+    // background:transparent;
+}
+
+.mat-dialog-container{
+    background-color: white;
+}
+// .mat-select-content{
+//     width: 213px;
+
+// }
+
+.mat-select-panel:not([class*=mat-elevation-z]) {
+    box-shadow: 0 0 0 0 !important;
+    min-width: 32px !important;
+    outline: 1px solid !important;
+
+}
+
+.cdk-overlay-connected-position-bounding-box {
+    transform:translateY(-50%)!important;
+    margin-left: 144px !important;
+    margin-top: -52px !important;
+
+}

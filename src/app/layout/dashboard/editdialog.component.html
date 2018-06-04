@@ -1,0 +1,26 @@
+<div mat-dialog-content>
+    
+        <p>Enter the name:
+        <mat-form-field>
+          <input matInput type="text" name="otherName" [(ngModel)]="data1.name" style="background-color:white;border-bottom:1px solid;">
+        </mat-form-field></p>
+
+        <p>Enter the location:
+        <mat-form-field>
+                <mat-select [(ngModel)]="data1.location" style="background-color:white;border-bottom:1px solid;">
+                  <mat-option style="background-color:white" value="Mangalore"> Mangalore </mat-option>
+                  <mat-option style="background-color:white" value="Bangalore"> Bangalore </mat-option>
+                </mat-select> 
+        
+        </mat-form-field></p>
+
+        <p>email-Id:
+        <mat-form-field>
+            <input matInput type="email" name="anotherName" [(ngModel)]="data1.email" style="background-color: white;border-bottom:1px solid;">
+        </mat-form-field></p>
+        
+</div>
+<div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">No Thanks</button>
+        <button mat-button [mat-dialog-close]="data1" cdkFocusInitial>Ok</button>
+</div>
