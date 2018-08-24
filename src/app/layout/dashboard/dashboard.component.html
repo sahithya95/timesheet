@@ -14,6 +14,7 @@
                                     <th>Name</th>
                                     <th>location</th>
                                     <th>email-id</th>
+                                    <th>role</th>
                                     <th>action</th>
                                 </tr>
                             </thead>
@@ -22,6 +23,7 @@
                                     <td>{{employee.data.name}}</td>
                                     <td>{{employee.data.location}}</td>
                                     <td>{{employee.data.email}}</td>
+                                    <td>{{employee.data.role}}</td>
                                     <td>
                                         <div>
                                             <button (click)="editProjectDialog($event,employee.data,employee.id,i)">edit</button>

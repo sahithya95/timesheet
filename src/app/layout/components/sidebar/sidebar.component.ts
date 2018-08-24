@@ -1,3 +1,4 @@
+import { AuthService, User } from './../../../auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
@@ -12,7 +13,9 @@ export class SidebarComponent {
     showMenu: string = '';
     pushRightClass: string = 'push-right';
 
-    constructor(private translate: TranslateService, public router: Router) {
+    constructor(private translate: TranslateService, 
+        public router: Router,
+        public auth:AuthService) {
         this.translate.addLangs(['en', 'fr', 'ur', 'es', 'it', 'fa', 'de']);
         this.translate.setDefaultLang('en');
         const browserLang = this.translate.getBrowserLang();
@@ -63,4 +66,12 @@ export class SidebarComponent {
     onLoggedout() {
         localStorage.removeItem('isLoggedin');
     }
+    // isAdmin(user:User){
+    //     if(user.roles.admin){
+    //     console.log(user.roles.admin);
+    //   return true
+    //   }
+    //     else 
+    //     return false;
+    //   }
 }

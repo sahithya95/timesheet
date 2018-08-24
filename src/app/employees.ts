@@ -7,4 +7,5 @@ export interface Employees{
     description:string,
     date: string,
     hours:number,
+    role:string
   }

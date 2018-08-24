@@ -21,6 +21,12 @@
         
       </mat-form-field>
     </p>
+    <p>Roles:
+        <mat-radio-group [(ngModel)]="data.role">
+          <mat-radio-button value="admin">admin</mat-radio-button>
+          <mat-radio-button value="user">user</mat-radio-button>
+        </mat-radio-group>
+    </p>
 
   </div>
   <div mat-dialog-actions>

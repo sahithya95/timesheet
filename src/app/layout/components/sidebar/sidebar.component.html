@@ -1,13 +1,13 @@
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
     <div class="list-group">
-        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+        <a routerLink="/dashboard" *ngIf="auth.isadmin" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Resources' | translate }}
         </a>
         
         <a [routerLink]="['/tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-table"></i>&nbsp;{{ 'Timesheet' | translate }}
         </a>     
-        <a [routerLink]="['/project']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+        <a [routerLink]="['/project']" *ngIf="auth.isadmin" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-table"></i>&nbsp;{{ 'Project' | translate }}
             
         </a>   

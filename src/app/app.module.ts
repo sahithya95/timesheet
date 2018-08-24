@@ -1,7 +1,10 @@
 import { UserService } from './shared/guard/user.service';
 import { RouterModule } from '@angular/router';
 import { FirebaseService } from './firebase.service';
-import { MatDialogModule,MatSelectModule,MatButtonModule, MatOptionModule,MatFormFieldModule, MatInputModule} from '@angular/material';
+import { MatDialogModule,MatSelectModule,MatButtonModule, 
+         MatOptionModule,MatFormFieldModule, MatInputModule, MatRadioButton} from '@angular/material';
+import {MatRadioModule} from '@angular/material';
+
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -61,9 +64,8 @@ export const createTranslateLoader = (http: HttpClient) => {
         MatButtonModule,
         CoreModule,
         FormsModule, 
-        ReactiveFormsModule
-
-
+        ReactiveFormsModule,
+        MatRadioModule
     ],
     declarations: [AppComponent],
     providers: [AuthGuard,FirebaseService,AuthService,UserService],

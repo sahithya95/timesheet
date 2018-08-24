@@ -8,7 +8,11 @@ import { Injectable } from '@angular/core';
 
 
 import { AngularFireAuth } from 'angularfire2/auth';
-
+interface user1{
+  email:string;
+  id:string;
+  password:string;
+}
 // 
 
 @Injectable({
@@ -21,8 +25,8 @@ export class FirebaseService {
   itemdoc:AngularFirestoreDocument<any>;
   projects: Observable<any>;
   timesheet:Observable<any>;
-  user1:Observable<any>;
- 
+  user:Observable<any>;
+  
 
   constructor(public afs:AngularFirestore,public afAuth : AngularFireAuth) {
     
@@ -68,6 +72,17 @@ getEmp(){
        });
        }); 
        }
+       getuser(){
+  
+        return this.afs.collection('user').snapshotChanges().map(actions => {
+         return  actions.map(obj => {
+           return {
+             id: obj.payload.doc.id,
+             data: obj.payload.doc.data()
+           }
+         });
+         }); 
+         }
 
 
   deleteitem(item:Employees){

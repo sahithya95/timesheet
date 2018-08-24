@@ -128,6 +128,7 @@ export interface User {
     name : string;
     location : string;
     email : string;
+    role:string;
 }
 
 @Component({

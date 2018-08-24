@@ -12,8 +12,6 @@ const routes: Routes = [
             { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
             { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
             { path: 'project', component: ProjectComponent },
-            // { path: 'bs-element', loadChildren: './bs-element/bs-element.module#BsElementModule' },
-            //{ path: 'components', loadChildren: './bs-component/bs-component.module#BsComponentModule' },
         ]
     }
 ];

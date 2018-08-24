@@ -18,12 +18,25 @@ export class UserService {
     return new Promise<any>((resolve, reject) => {
       var user = firebase.auth().onAuthStateChanged(function(user){
         if (user) {
+          console.log("true");
           resolve(user);
         } else {
           reject('No user logged in');
+          console.log("false");
         }
       })
     })
   }
+  updateCurrentUser(value){
+    return new Promise((resolve, reject) => {
+      var user = firebase.auth().currentUser;
+      user.updateProfile({
+        displayName: value.name,
+        photoURL: user.photoURL
+      }).then(res => {
+        resolve(res)
+      }, err => reject(err))
+    })
 
+}
 }

@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent, DialogOverview,Editdialog } from './dashboard.component';
 import { PageHeaderModule } from '../../shared';
-import { MatFormFieldModule, MatButtonModule, MatDialogModule, MatInputModule,MatOptionModule,MatSelectModule } from '@angular/material';
+import { MatFormFieldModule, MatButtonModule, MatDialogModule, MatInputModule,MatOptionModule,MatSelectModule, MatRadioModule } from '@angular/material';
 
 @NgModule({
     imports: [
@@ -17,7 +17,7 @@ import { MatFormFieldModule, MatButtonModule, MatDialogModule, MatInputModule,Ma
         MatFormFieldModule,
         MatDialogModule,
         MatInputModule,MatOptionModule,MatSelectModule,
-        FormsModule
+        FormsModule,MatRadioModule
     ],
     declarations: [
         DashboardComponent,

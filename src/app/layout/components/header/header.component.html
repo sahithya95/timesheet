@@ -11,11 +11,12 @@
         <ul class="navbar-nav ml-auto">    
             <li class="nav-item dropdown" ngbDropdown>
                 <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
-                    <i class="fa fa-user"></i> John Smith
+                    <i class="fa fa-user"></i> setting
                     <b class="caret"></b>
                 </a>
                 <div class="dropdown-menu-right" ngbDropdownMenu>
-                    <button (click)="logout()"><i class="fa fa-fw fa-power-off"></i> {{ 'Log Out' | translate }}</button>
+                    <button (click)="logout()"><i class="fa fa-fw fa-power-off"></i> {{ 'Log Out' | translate }}
+                    </button>
 
                     <!-- <a class="dropdown-item" [routerLink]="['/login']" (click)="onLoggedout()">
                         <i class="fa fa-fw fa-power-off"></i> {{ 'Log Out' | translate }} -->

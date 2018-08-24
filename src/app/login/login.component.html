@@ -13,6 +13,7 @@
                     <div class="form-group">
                         <input type="password" formControlName="password" ([ngModel])="password" class="form-control input-underline input-lg" placeholder="Password" >
                     </div>
+                    
                     <button class="btn  btn-lg btn-info" [disabled]="form.invalid"  (click)="login()" > Log in </button>
                      &nbsp;
                      <button class="btn  btn-lg btn-info" (click)="loginwithGoogle()">login with google</button>

@@ -51,14 +51,22 @@ export class HeaderComponent implements OnInit {
     onLoggedout() {
         localStorage.removeItem('isLoggedin');
     }
+
+
     logout(){
         this.authService.logout()
         .then((res) => {
-          this.location.back();
+        //   this.location.back();
+        console.log("logout")
+        this.router.navigate(['/login']);
+        
         }, (error) => {
           console.log("Logout error", error);
         });
+        
       }
+
+
 
     changeLang(language: string) {
         this.translate.use(language);
